@@ -27,3 +27,5 @@ The color of the sections will depend on the strength of the password:
     - If the password is medium - the first two sections are yellow the last one is gray;
 
     - If the password is strong, all sections are green;
+
+DEMO [https://yevtok.github.io/test-app/]
