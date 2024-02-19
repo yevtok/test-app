@@ -21,7 +21,7 @@ export class PasswdStrengthComponent {
 		Validators.minLength(8)
 	]);
 
-    calcStrength(password: string = ""): Pass {
+	calcStrength(password: string = ""): Pass {
 		if (!password.length) return Pass.empty;
 		if (password.length < 8) {
 			return Pass.invalid;
@@ -70,5 +70,4 @@ export class PasswdStrengthComponent {
 			case 4 : return 'strong'
 		}
 	}
-
 }
