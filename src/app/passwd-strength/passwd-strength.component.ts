@@ -10,7 +10,7 @@ enum Pass {
 }	
 
 @Component({
-  selector: 'app-passwd-strength',
+  selector: 'passwd-strength',
   templateUrl: './passwd-strength.component.html',
   styleUrl: './passwd-strength.component.scss'
 })
@@ -27,11 +27,11 @@ export class PasswdStrengthComponent {
 			return Pass.invalid;
 		} else {
 
-			const hasLetters = /[a-zA-Z]/.test(password);
-			const hasDigits = /\d/.test(password);
-			const hasSymbols = /[!@#$%^&*()_+{}[\]:;<>,.?~]/.test(password);
+		const hasLetters = /[a-zA-Z]/.test(password);
+		const hasDigits = /\d/.test(password);
+		const hasSymbols = /[!@#$%^&*()_+{}[\]:;<>,.?~]/.test(password);
 
-			if (hasLetters && hasDigits && hasSymbols) {
+		if (hasLetters && hasDigits && hasSymbols) {
 				return Pass.strong;
 			} else if (hasLetters && (hasDigits || hasSymbols)) {
 				return Pass.medium;
@@ -71,7 +71,4 @@ export class PasswdStrengthComponent {
 		}
 	}
 
-	checkPassword() {
-		this.passwd.reset();
-	}
 }
